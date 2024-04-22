@@ -5,7 +5,6 @@ import { useEffect } from "react";
 
 const usePopularMovies = () => {
   // fetch the ata from TMDB and update the store
-
   const dispatch = useDispatch();
   const getPopularMovies = async () => {
     const data = await fetch(
