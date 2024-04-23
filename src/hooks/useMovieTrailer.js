@@ -14,7 +14,7 @@ const useMovieTrailer = (movieId) => {
         movieId +
         "/videos?language=en-US",
       API_OPTIONS
-    );
+    ); 
     const json = await data.json();
 
     const filterTrailer = json.results.filter(
