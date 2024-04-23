@@ -11,8 +11,7 @@ const useTopRatedMovies = () => {
       "https://api.themoviedb.org/3/movie/top_rated?page=1",
       API_OPTIONS
     );
-    const json = await data.json();
-    // console.log("Treding Movies" + json.results);
+    const json = await data.json(); 
     dispatch(addTopRatedMovies(json.results));
   };
 
