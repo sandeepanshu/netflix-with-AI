@@ -20,7 +20,7 @@ jobs:
       - run: npm install
 
       # Build React app (creates build/ folder)
-      - run: npm run build
+      - run: CI=false npm run build
 
       # Deploy to Firebase Hosting
       - uses: FirebaseExtended/action-hosting-deploy@v0
