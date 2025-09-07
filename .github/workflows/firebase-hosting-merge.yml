@@ -11,15 +11,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # Setup Node.js
+      # Setup Node.js (use Node 20 for Firebase CLI compatibility)
       - uses: actions/setup-node@v3
         with:
-          node-version: "18" # or '20' depending on your React app
+          node-version: '20'
 
       # Install dependencies
       - run: npm install
 
-      # Build React app (creates build/ folder)
+      # Build React app (ignore warnings in CI for now)
       - run: CI=false npm run build
 
       # Deploy to Firebase Hosting
